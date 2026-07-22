@@ -1,0 +1,266 @@
+    :root {
+        --glass-bg: rgba(255, 255, 255, 0.07);
+        --glass-border: rgba(255, 255, 255, 0.15);
+        --glass-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+        --primary-teal: #007B69;
+        --primary-gold: #C5A059;
+        --text-white: #ffffff;
+        --text-muted: rgba(255, 255, 255, 0.6);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Cairo', sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        overflow: hidden;
+        background: linear-gradient(45deg, #1a1a1a, #392015, #003d33, #0b0b0b);
+        background-size: 200% 200%;
+        animation: gradientBG 30s ease infinite;
+    }
+
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    body::before,
+    body::after {
+        content: '';
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        filter: blur(55px);
+        z-index: 0;
+        opacity: 0.5;
+        animation: floatOrb 10s ease-in-out infinite alternate;
+        will-change: transform;
+        pointer-events: none;
+    }
+
+    body::before {
+        background: var(--primary-teal);
+        top: 10%;
+        left: 10%;
+    }
+
+    body::after {
+        background: #5c3524;
+        bottom: 10%;
+        right: 10%;
+        animation-delay: -5s;
+    }
+
+    @keyframes floatOrb {
+        0% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        100% {
+            transform: translate(18px, -18px) scale(1.06);
+        }
+    }
+
+    .login-wrapper,
+    .login-page {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .glass-card {
+        position: relative;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        box-shadow: var(--glass-shadow);
+        padding: 40px 30px;
+        overflow: hidden;
+        transform: translateZ(0);
+    }
+
+    .glass-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.05),
+                transparent);
+        transform: skewX(-25deg);
+        transition: left 0.7s ease;
+        pointer-events: none;
+        will-change: transform, left;
+    }
+
+    .glass-card:hover::before {
+        left: 120%;
+    }
+
+    .brand-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .brand-logo {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+        transition: transform 0.25s ease;
+        will-change: transform;
+    }
+
+    .brand-logo:hover {
+        transform: scale(1.03);
+    }
+
+    .brand-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-white);
+        margin-bottom: 5px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-subtitle {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin: 0;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 8px;
+        display: block;
+        font-weight: 600;
+    }
+
+    .input-glass {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        padding: 14px 16px;
+        color: #fff;
+        font-size: 1rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        outline: none;
+    }
+
+    .input-glass:focus {
+        background: rgba(0, 0, 0, 0.3);
+        border-color: var(--primary-gold);
+        box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.15);
+    }
+
+    .btn-glass {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--primary-teal), #005a4d);
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        box-shadow: 0 4px 15px rgba(0, 123, 105, 0.4);
+        will-change: transform;
+    }
+
+    .btn-glass:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 123, 105, 0.55);
+        filter: brightness(1.06);
+    }
+
+    .btn-glass:active {
+        transform: translateY(0);
+        filter: brightness(0.98);
+    }
+
+    .footer-links {
+        margin-top: 25px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+    }
+
+    .footer-links a {
+        color: var(--primary-gold);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .alert-glass {
+        background: rgba(220, 53, 69, 0.2);
+        border: 1px solid rgba(220, 53, 69, 0.35);
+        color: #ffb3b3;
+        padding: 12px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    @media (max-width: 576px) {
+        .glass-card {
+            padding: 30px 20px;
+        }
+
+        .brand-logo {
+            max-width: 170px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        body {
+            animation: none !important;
+        }
+
+        body::before,
+        body::after {
+            animation: none !important;
+        }
+
+        .glass-card::before {
+            transition: none !important;
+        }
+
+        .btn-glass:hover {
+            transform: none !important;
+        }
+    }

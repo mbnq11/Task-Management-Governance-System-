@@ -1,0 +1,303 @@
+        /* =========================================
+           1. تعريف الخطوط 
+           ========================================= */
+        @font-face {
+            font-family: "Cairo";
+            src: url("/fonts/Cairo-Regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Cairo";
+            src: url("/fonts/Cairo-Bold.ttf") format("truetype");
+            font-weight: 700;
+            font-style: normal;
+        }
+
+
+        /* =========================================
+           2. إعدادات الصفحة العامة
+           ========================================= */
+        html,
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            background-color: #525659;
+            margin: 0;
+            padding: 20px 0;
+            color: #333;
+            font-size: 11px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page {
+            width: 21cm;
+            min-height: 29.7cm;
+            background: #fff;
+            margin: 0 auto;
+            padding: 1cm 1cm 60px 1cm;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            box-sizing: border-box;
+            border-radius: 2px;
+        }
+
+        /* زر الطباعة */
+        .print-btn-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .print-btn {
+            background: #333;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .print-btn:hover {
+            background: #555;
+        }
+
+        /* =========================================
+           3. التنسيقات الداخلية
+           ========================================= */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .header-table {
+            border-bottom: 2px solid #6f4e37;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .header-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #392015;
+            ;
+            line-height: 1.5;
+        }
+
+        .logo-container {
+            text-align: center;
+        }
+
+        .logo-container img {
+            max-height: 80px;
+        }
+
+        .info-box {
+            background-color: #fcfcfc;
+            border: 1px solid #ddd;
+            border-right: 4px solid #6f4e37;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+
+        .section-title {
+            background-color: #6f4e37;
+            color: #fff;
+            padding: 6px 15px;
+            margin: 15px 0 10px;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: 11px;
+        }
+
+        .custom-table {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .custom-table th {
+            background-color: #f8f9fa;
+            color: #495057;
+            border: 1px solid #dee2e6;
+            padding: 8px 4px;
+            font-weight: bold;
+            font-size: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .custom-table td {
+            border: 1px solid #dee2e6;
+            padding: 6px 4px;
+            font-size: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .custom-table tr:nth-child(even) {
+            background-color: #fff;
+        }
+
+        .custom-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .text-start {
+            text-align: right !important;
+            padding-right: 8px !important;
+        }
+
+        /* الألوان والنقاط */
+        .progress-container {
+            background-color: #e9ecef;
+            border-radius: 6px;
+            width: 85%;
+            height: 6px;
+            margin: 4px auto 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 6px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 3px;
+        }
+
+        .dot-green {
+            background-color: #392015;
+        }
+
+        .dot-blue {
+            background-color: #392015;
+        }
+
+        .badge {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 9px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .bg-high {
+            color: #392015;
+            ;
+        }
+
+        .bg-med {
+            color: #392015;
+            ;
+        }
+
+        .bg-low {
+            color: #392015;
+            ;
+        }
+
+        .bg-danger {
+            color: #392015;
+            ;
+        }
+
+        .custom-table {
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .custom-table th,
+        .custom-table td {
+            text-align: center;
+        }
+
+
+        /* =========================================
+           4. الفوتر والطباعة
+           ========================================= */
+        .footer-space {
+            display: none;
+        }
+
+        .footer-fixed {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 9px;
+            color: #777;
+            border-top: 1px solid #eee;
+            background-color: #fff;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 5mm;
+            }
+
+            html,
+            body {
+                background: #fff !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .page {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+                min-height: auto !important;
+                display: block;
+            }
+
+            .print-btn-container {
+                display: none !important;
+            }
+
+            thead {
+                display: table-header-group;
+            }
+
+            tfoot {
+                display: table-footer-group;
+            }
+
+            tr {
+                page-break-inside: avoid;
+            }
+
+            .footer-space {
+                display: block;
+                height: 50px;
+            }
+
+            .footer-fixed {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
+        }

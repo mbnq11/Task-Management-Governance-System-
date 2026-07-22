@@ -1,0 +1,1008 @@
+/* =========================================
+   ألوان الهوية 
+   ========================================= */
+:root {
+    --pal-brown: #392015;
+    --pal-beige: #D4AF91;
+    --pal-teal: #007B69;
+    --pal-wine: #973D4B;
+    --pal-peach: #E3A778;
+
+    --primary: var(--pal-brown);
+    --primary-dark: #5E452E;
+    --primary-soft: #F3ECE5;
+
+    --primary-ring: rgba(57, 32, 21, 0.25);
+
+    --link-accent: var(--primary);
+    --link-accent-hover: var(--primary-dark);
+}
+
+
+/* =========================
+   لون العودي للأيقونات (عام لكل الموقع)
+   ========================= */
+.bi {
+    color: var(--primary) !important;
+}
+
+/* =========================
+   تخصيص الناف بار (خلفية + أيقونات داخل الناف بار فقط)
+   ========================= */
+.amanah-navbar {
+    background: linear-gradient(135deg, #211008 0%, #5E452E 100%) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.amanah-navbar .bi {
+    color: #F2E7DE !important;
+}
+
+.amanah-navbar .navbar-brand,
+.amanah-navbar .text-white {
+    color: #fff !important;
+}
+
+.amanah-navbar .nav-profile-badge {
+    background-color: #D4AF91 !important;
+    color: #392015 !important;
+}
+
+.amanah-navbar .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.amanah-navbar .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* =========================
+   شعار الأمانة الأبيض + Responsive
+   ========================= */
+.amanah-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+}
+
+.amanah-logo {
+    height: 90px;
+    width: auto;
+    max-width: 220px;
+    display: block;
+}
+
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.card {
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+
+.main-container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+.nav-profile-badge {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+
+.btn-back {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+
+.btn-back:hover {
+    background-color: #e9ecef;
+    color: var(--link-accent);
+    transform: translateX(3px);
+}
+
+
+
+
+
+/* =========================================
+   تنسيقات صفحات الموظفين  (Dashboard CISO)
+   ========================================= */
+
+.dashboard-header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: white;
+    gap: 12px;
+}
+
+.kpi-card {
+    border: none;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    cursor: pointer;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-icon-bg {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    font-size: 8rem;
+    opacity: 0.05;
+    transform: rotate(-15deg);
+}
+
+.kpi-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2c3e50;
+}
+
+.kpi-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7f8c8d;
+    text-transform: uppercase;
+}
+
+.table-card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.table-header {
+    background: #fff;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px 20px;
+}
+
+.avatar-manager {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.tasks-scroll-area {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.alert-card-returned {
+    background: #fff5f5;
+    border-right: 5px solid #dc3545;
+}
+
+/* =========================================
+   تنسيقات صفحات الموظفين (Manager Dashboard)
+   ========================================= */
+
+.alert-card-returned {
+    background: #fff5f5;
+    border-right: 5px solid #dc3545;
+    animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 0 0 5px rgba(220, 53, 69, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.1);
+    }
+}
+
+/* =========================================
+   تنسيقات صفحات الموظفين (Team Leader)
+   ========================================= */
+
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* =========================================
+   تنسيقات صفحات الموظفين (Employee Dashboard)
+   ========================================= */
+
+.avatar-employee {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* =========================================
+   تنسيقات صفحات الموظفين (Auditor Dashboard)
+   ========================================= */
+
+.kpi-circle-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kpi-circle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.progress-ring {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: conic-gradient(var(--color) var(--percent), #f0f2f5 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.progress-ring::before {
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.progress-value {
+    position: relative;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+    z-index: 1;
+}
+
+.kpi-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.kpi-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.kpi-subtext {
+    font-size: 0.65rem;
+    color: #adb5bd;
+}
+
+.expand-hint {
+    font-size: 0.65rem;
+    margin-top: 8px;
+    padding-top: 4px;
+    border-top: 1px solid #f9f9f9;
+    color: var(--link-accent);
+    text-align: center;
+    width: 100%;
+}
+
+.chart-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    background: white;
+    overflow: hidden;
+}
+
+.scrollable-table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.table-compact td,
+.table-compact th {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.progress-table {
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e9ecef;
+    width: 100%;
+    min-width: 80px;
+}
+
+.text-success-dark {
+    color: #198754;
+}
+
+.text-danger-dark {
+    color: #dc3545;
+}
+
+.text-primary-dark {
+    color: var(--primary);
+}
+
+.text-warning-dark {
+    color: #ffc107;
+}
+
+.text-purple-dark {
+    color: #6f42c1;
+}
+
+.text-dark-grey {
+    color: #343a40;
+}
+
+.custom-scrollbar::-webkit-scrollbar,
+.scrollable-table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track,
+.scrollable-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb,
+.scrollable-table-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+.hover-bg-light:hover {
+    background-color: #f8f9fa;
+}
+
+.transition-all {
+    transition: all 0.2s ease;
+}
+
+/* =========================================
+   تنسيقات نظام تصفية المهام (Task Filtering)
+   ========================================= */
+
+.nav-pills .nav-link {
+    border-radius: 50px;
+    padding: 8px 25px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #eee;
+    margin-left: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 4px 10px rgba(122, 92, 62, 0.2);
+}
+
+.filter-toolbar {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.filter-btn {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.filter-btn.active {
+    font-weight: 800;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group-status .filter-btn.active.btn-outline-primary {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.filter-group-status .filter-btn.active.btn-outline-success {
+    background-color: #198754;
+    color: #fff;
+}
+
+.filter-group-status .filter-btn.active.btn-outline-dark {
+    background-color: #212529;
+    color: #fff;
+}
+
+.btn-outline-purple {
+    color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-outline-purple:hover {
+    background-color: #6f42c1;
+    color: #fff;
+}
+
+.filter-group-status .filter-btn.active.btn-outline-purple {
+    background-color: #6f42c1;
+    color: #fff;
+    border-color: #6f42c1;
+}
+
+.vr {
+    border-left: 1px solid #ddd;
+    height: 25px;
+    align-self: center;
+    margin: 0 10px;
+}
+
+/* =========================================
+   ألوان مخصصة (Custom Utility Classes)
+   ========================================= */
+
+.bg-purple {
+    background-color: #6f42c1 !important;
+    color: #fff;
+}
+
+.bg-oudi-soft {
+    background-color: var(--primary-soft) !important;
+    color: var(--primary-dark) !important;
+}
+
+/* =========================================
+   تنسيقات صفحة إنشاء مهمة (Create Task)
+   ========================================= */
+
+.task-form-card {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.task-form-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 15px 20px;
+}
+
+.access-denied-box {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff5f5;
+    border: 1px solid #f5c2c7;
+    border-radius: 10px;
+    color: #842029;
+}
+
+.access-denied-icon {
+    font-size: 4rem;
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+.priority-option {
+    cursor: pointer;
+    transition: all 0.2s;
+    opacity: 0.8;
+}
+
+.form-check-input:checked+.priority-option {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   تنسيقات صفحة الانتظار (Restricted Status)
+   ========================================= */
+
+.task-status-info {
+    border-left: 4px solid var(--primary);
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.final-attachment-item {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.final-attachment-item:hover {
+    transform: translateX(-5px);
+    border-color: var(--primary);
+}
+
+.btn-preview {
+    border-radius: 50px;
+    font-size: 0.8rem;
+    padding: 5px 15px;
+}
+
+.action-box {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================
+   تنسيقات عرض تفاصيل المهمة (Show Task)
+   ========================================= */
+
+.dashboard-header {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    color: white;
+}
+
+.content-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0);
+    transition: 0.2s;
+}
+
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.chat-bubble {
+    max-width: 85%;
+    min-width: 120px;
+    border-radius: 15px;
+    padding: 10px 15px;
+    word-wrap: break-word;
+}
+
+.chat-bubble.me {
+    background-color: var(--primary-soft);
+    color: var(--primary-dark);
+    border-bottom-right-radius: 2px;
+}
+
+.chat-bubble.other {
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    border-bottom-left-radius: 2px;
+}
+
+.system-comment {
+    background-color: #fff3cd !important;
+    border: 1px solid #ffeeba !important;
+    color: #856404;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-custom {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+
+
+/* =========================================
+   يعتمد على ID: #taskTabs + #taskTabsContent
+   ========================================= */
+
+
+#taskTabs .bi,
+#taskTabsContent .bi {
+    color: var(--pal-brown) !important;
+}
+
+#taskTabs .nav-link {
+    color: var(--pal-brown) !important;
+    background: #fff !important;
+    border: 1px solid rgba(57, 32, 21, .12) !important;
+    border-radius: 999px !important;
+}
+
+#taskTabs .nav-link:hover {
+    background: rgba(212, 175, 145, .22) !important;
+    border-color: rgba(57, 32, 21, .18) !important;
+}
+
+#taskTabs .nav-link.active {
+    background: var(--pal-brown) !important;
+    color: #fff !important;
+    border-color: var(--pal-brown) !important;
+    box-shadow: 0 6px 14px rgba(57, 32, 21, .14) !important;
+}
+
+#taskTabs .nav-link.active .bi {
+    color: #fff !important;
+}
+
+#taskTabs .badge.bg-white {
+    border-color: rgba(255, 255, 255, .35) !important;
+}
+
+#taskTabs .nav-link.active .badge {
+    background: rgba(255, 255, 255, .15) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, .22) !important;
+}
+
+#taskTabsContent .filter-toolbar {
+    border: 1px solid rgba(57, 32, 21, .08) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .03) !important;
+}
+
+#taskTabsContent .form-control.bg-light {
+    background: var(--primary-soft) !important;
+}
+
+#taskTabsContent .form-control:focus {
+    border-color: rgba(0, 123, 105, .35) !important;
+    box-shadow: 0 0 0 .25rem var(--primary-ring) !important;
+}
+
+#taskTabsContent .btn-outline-secondary {
+    color: var(--pal-brown) !important;
+    border-color: rgba(57, 32, 21, .18) !important;
+}
+
+#taskTabsContent .btn-outline-secondary:hover {
+    background: rgba(212, 175, 145, .22) !important;
+    border-color: rgba(57, 32, 21, .25) !important;
+}
+
+#taskTabsContent .filter-btn.active {
+    background: var(--pal-brown) !important;
+    color: #fff !important;
+    border-color: var(--pal-brown) !important;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12) !important;
+}
+
+#taskTabsContent .btn-outline-primary {
+    color: var(--pal-teal) !important;
+    border-color: rgba(0, 123, 105, .45) !important;
+}
+
+#taskTabsContent .btn-outline-primary:hover {
+    background: var(--pal-teal) !important;
+    color: #fff !important;
+    border-color: var(--pal-teal) !important;
+}
+
+#taskTabsContent .btn-outline-info {
+    color: var(--pal-peach) !important;
+    border-color: rgba(227, 167, 120, .55) !important;
+}
+
+#taskTabsContent .btn-outline-info:hover {
+    background: var(--pal-peach) !important;
+    color: #fff !important;
+    border-color: var(--pal-peach) !important;
+}
+
+#taskTabsContent .btn-outline-purple {
+    color: var(--pal-wine) !important;
+    border-color: rgba(151, 61, 75, .55) !important;
+}
+
+#taskTabsContent .btn-outline-purple:hover {
+    background: var(--pal-wine) !important;
+    color: #fff !important;
+    border-color: var(--pal-wine) !important;
+}
+
+#taskTabsContent thead.bg-light {
+    background: var(--primary-soft) !important;
+}
+
+#taskTabsContent a.btn.btn-outline-primary {
+    border-color: rgba(0, 123, 105, .45) !important;
+    color: var(--pal-teal) !important;
+}
+
+#taskTabsContent a.btn.btn-outline-primary:hover {
+    background: var(--pal-teal) !important;
+    border-color: var(--pal-teal) !important;
+    color: #fff !important;
+}
+
+
+i.bi {
+    color: var(--pal-brown) !important;
+}
+
+.text-success i.bi,
+.btn-success i.bi,
+.bg-success i.bi {
+    color: var(--pal-teal) !important;
+}
+
+.text-danger i.bi,
+.btn-danger i.bi,
+.bg-danger i.bi,
+.text-warning i.bi,
+.bg-warning i.bi {
+    color: var(--pal-wine) !important;
+}
+
+.text-primary i.bi,
+.btn-primary i.bi,
+.bg-primary i.bi,
+.text-info i.bi,
+.bg-info i.bi {
+    color: var(--pal-peach) !important;
+}
+
+.text-muted i.bi,
+.text-secondary i.bi {
+    color: var(--pal-brown) !important;
+    opacity: .75;
+}
+
+
+/* =========================================
+   تحسينات الاستجابة (Responsive) للجوال/الايباد/الحاسوب
+   ========================================= */
+
+/* الجوالات */
+@media (max-width: 576px) {
+    .main-container {
+        padding-top: 18px;
+        padding-bottom: 30px;
+    }
+
+    .kpi-value {
+        font-size: 1.6rem;
+    }
+
+    .kpi-number {
+        font-size: 1.25rem;
+    }
+
+    .tasks-scroll-area {
+        max-height: 360px;
+    }
+
+    .progress-ring {
+        width: 56px;
+        height: 56px;
+    }
+
+    .progress-ring::before {
+        width: 44px;
+        height: 44px;
+    }
+
+    .chat-bubble {
+        max-width: 95%;
+    }
+
+    .nav-pills .nav-link {
+        padding: 7px 16px;
+        margin-left: 6px;
+    }
+
+    .amanah-logo {
+        height: 42px;
+        max-width: 140px;
+    }
+
+    .amanah-logo-wrap {
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
+}
+
+/* الايبادات */
+@media (min-width: 577px) and (max-width: 992px) {
+    .main-container {
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+
+    .kpi-value {
+        font-size: 1.85rem;
+    }
+
+    .tasks-scroll-area {
+        max-height: 420px;
+    }
+
+    .chat-bubble {
+        max-width: 90%;
+    }
+
+    .amanah-logo {
+        height: 50px;
+        max-width: 160px;
+    }
+}
+
+/* الشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .main-container {
+        padding-top: 32px;
+        padding-bottom: 60px;
+    }
+
+    .kpi-value {
+        font-size: 2.1rem;
+    }
+}
+
+.team-performance-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.team-performance-table th,
+.team-performance-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.team-performance-table .col-employee {
+    width: 180px;
+}
+
+.team-performance-table .col-report {
+    width: 70px;
+}
+
+.team-performance-table .col-num {
+    width: 75px;
+}
+
+.team-performance-table .col-progress {
+    width: 170px;
+}
+
+.team-performance-table .col-details {
+    width: 340px;
+    min-width: 340px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+.team-performance-table th.col-details {
+    line-height: 1.2;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+    .team-performance-table .col-details {
+        width: 260px;
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-performance-table .col-details {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .team-performance-table .col-employee {
+        width: 150px;
+    }
+}

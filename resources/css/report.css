@@ -1,0 +1,296 @@
+/* ==========================================================================
+   1. إعدادات الخطوط والصفحة (Global Settings)
+   ========================================================================== */
+@font-face {
+    font-family: "Cairo";
+    src: url("/fonts/Cairo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cairo";
+    src: url("/fonts/Cairo-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+html,
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    background-color: #525659;
+    margin: 0;
+    padding: 20px 0;
+    color: #333;
+    font-size: 11px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    background: #fff;
+    margin: 0 auto;
+    padding: 1cm 1cm 50px 1cm;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   2. الجداول والهيكل 
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td,
+th {
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 6px 5px;
+}
+
+/* الترويسة الموحدة */
+.header-table {
+    border-bottom: 3px solid #6f4e37;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header-table td {
+    border: none !important;
+    vertical-align: top;
+}
+
+.header-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #392015;
+    line-height: 1.6;
+}
+
+.logo-container {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+.logo-container img {
+    max-height: 85px;
+    max-width: 100%;
+}
+
+/* صندوق المعلومات */
+.info-box {
+    background-color: #fcfcfc;
+    border: 1px solid #ddd;
+    border-right: 4px solid #6f4e37;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: right;
+}
+
+/* العناوين */
+.section-title {
+    background-color: #6f4e37;
+    color: #fff;
+    padding: 6px 15px;
+    margin: 15px 0 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 11px;
+}
+
+/* جداول البيانات */
+.custom-table {
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+}
+
+.custom-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+}
+
+.custom-table td {
+    border: 1px solid #dee2e6;
+    font-size: 10px;
+    text-align: center;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* منطقة النص الطويل (الوصف) */
+.content-area {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    min-height: 100px;
+    text-align: justify;
+    line-height: 1.8;
+    word-wrap: break-word;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   3. الجماليات (Badges)
+   ========================================================================== */
+.team-badge {
+    display: inline-block;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+}
+
+.bg-high {
+    color: #392015;
+}
+
+.bg-med {
+    color: #392015;
+}
+
+.bg-low {
+    color: #392015;
+}
+
+/* ==========================================================================
+   4. إعدادات الطباعة (Print)
+   ========================================================================== */
+.print-btn-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.print-btn {
+    background: #333;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-space {
+    display: none;
+    height: 50px;
+}
+
+.footer-fixed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 9px;
+    color: #777;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+}
+
+.footer-space {
+    display: none;
+}
+
+.footer-fixed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 9px;
+    color: #777;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 5mm;
+    }
+
+    html,
+    body {
+        background: #fff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .page {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        min-height: auto !important;
+        display: block;
+    }
+
+    .print-btn-container {
+        display: none !important;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tfoot {
+        display: table-footer-group;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+
+    .footer-space {
+        display: block;
+        height: 50px;
+    }
+
+    .footer-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+}
